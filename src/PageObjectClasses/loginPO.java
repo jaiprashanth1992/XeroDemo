@@ -18,6 +18,7 @@ public class loginPO {
 
     By clickOnLoginBtn = By.id("submitButton");
 
+
     public loginPO(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);

@@ -77,5 +77,8 @@ readConfigFile prop = new readConfigFile();
         ExtentReports extent = new ExtentReports(System.getProperty("user.dir") + "/src/HtmlOutput/AddAccount_"+sdf.format(System.currentTimeMillis())+".html",true, DisplayOrder.OLDEST_FIRST);
         return extent;
     }
+
+
+
     }
 

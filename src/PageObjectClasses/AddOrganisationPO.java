@@ -10,7 +10,7 @@ public class AddOrganisationPO {
 
     WebDriver driver;
 
-    By clickOnAddOrgnaisation = By.xpath("//a[contains(@href,'/!xkcD/Organisation/Setup')]");
+    public By clickOnAddOrgnaisation = By.xpath("//a[contains(@href,'/!xkcD/Organisation/Setup')]");
 
     By setNameOfOrg = By.xpath("//input[contains(@data-automationid,'organisation-name--input')]");
 

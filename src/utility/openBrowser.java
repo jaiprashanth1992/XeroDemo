@@ -7,9 +7,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.seleniumhq.jetty9.security.SpnegoUserIdentity;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class openBrowser {
@@ -57,30 +59,22 @@ readConfigFile prop = new readConfigFile();
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 
     }
-
-    public static void takeSnapShot(WebDriver webdriver,String filetext) throws Exception{
-
-        //Convert web driver object to TakeScreenshot
-
-        TakesScreenshot scrShot =((TakesScreenshot)webdriver);
-
-        //Call getScreenshotAs method to create image file
-
-        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-
-        //Move image file to new destination
-
-        File DestFile=new File("\\src\\HtmlOutput"+filetext+".png");
-
-        //Copy file at destination
-
-        FileUtils.copyFile(SrcFile, DestFile);
-
+    public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+        String destination = System.getProperty("user.dir") + "/src/HtmlOutput/"+screenshotName+dateName+".png";
+        File finalDestination = new File(destination);
+        FileUtils.copyFile(source, finalDestination);
+        return destination;
     }
+
     public synchronized static ExtentReports getExtentReports()
     {
         SimpleDateFormat sdf = new SimpleDateFormat("yyy.MM.dd.HH.mm.ss");
-        ExtentReports extent = new ExtentReports("\\src\\HtmlOutput\\AddAccount_"+sdf.format(System.currentTimeMillis())+".html",true, DisplayOrder.OLDEST_FIRST);
+
+        ExtentReports extent = new ExtentReports(System.getProperty("user.dir") + "/src/HtmlOutput/AddAccount_"+sdf.format(System.currentTimeMillis())+".html",true, DisplayOrder.OLDEST_FIRST);
         return extent;
     }
     }

@@ -56,7 +56,9 @@ public class addAccount {
           browser.hitUrl(prop.getPropValue("Url"));
           extentTest.log(LogStatus.PASS,"TEst");
 
-          openBrowser.takeSnapShot(driver,"TEst");
+          String screenshotPath = openBrowser.getScreenhot(driver,"Test");
+          //To add it in the extent report
+          extentTest.log(LogStatus.INFO, extentTest.addScreenCapture(screenshotPath));
 
           browser.maximizeWindow();
           login = new loginPO(driver);
@@ -65,6 +67,7 @@ public class addAccount {
           login.setenterPassword(prop.getPropValue("Password"));
           login.clickLoginBtn();
         reporter.endTest(extentTest);
+
       }catch (Exception e){
           e.printStackTrace();
       }
@@ -166,7 +169,7 @@ public class addAccount {
         acc.setclickLogoutBtn();
 
         browser.closeBrowser(driver);
-  reporter.close();
+      reporter.close();
   }
 
 

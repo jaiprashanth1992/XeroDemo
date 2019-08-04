@@ -2,40 +2,49 @@ package PageObjectClasses;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utility.openBrowser;
 
 public class loginPO {
     WebDriver driver;
 
-    By loginOptinBtn= By.linkText("Login");
-
-    By emailAddress=By.id("email");
-
+    By loginOptinBtn = By.linkText("Login");
+    By emailAddress = By.id("email");
     By enterPassword = By.id("password");
-
     By clickOnLoginBtn = By.id("submitButton");
 
-
-    public loginPO(WebDriver driver){
+    /**
+     * This method is used to initialises the webelements of page webpage
+     * @param driver
+     */
+    public loginPO(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
-    public void clickLogInBtnOption(){
-              driver.findElement(loginOptinBtn).click();
+
+    /**This method identifies the elements of Login button in welcome screen
+     * and clicks it
+     */
+    public void clickLogInBtnOption() {
+        driver.findElement(loginOptinBtn).click();
     }
-    public void setenterEmailAddress(String email){
+
+    /**This method identifies the elements of email address text box and
+     * enter the key values as per get property value method
+     */
+    public void enterEmailAddress(String email) {
         driver.findElement(emailAddress).sendKeys(email);
     }
 
-    public void setenterPassword(String password){
+    /**This method identifies the elements of password text box and
+     * enter the key values as per get property value method
+     */
+    public void enterPassword(String password) {
         driver.findElement(enterPassword).sendKeys(password);
     }
 
-    public void clickLoginBtn(){
+    /**This method identifies the elements of Login button and clicks it
+     */
+    public void clickLoginBtn() {
         driver.findElement(clickOnLoginBtn).click();
     }
-
 }

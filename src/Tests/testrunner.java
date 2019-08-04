@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/Tests/FeatureFile"}
-        ,tags = {"@account"}
+        ,tags = {"@addingAnzAccount"}
 )
 
 public class testrunner {

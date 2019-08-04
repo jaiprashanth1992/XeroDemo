@@ -1,5 +1,5 @@
 # XeroDemo
-*************************************************Selenium with Cucumber(BDD framework)*******************************************************
+##Selenium with Cucumber(BDD framework)##
 
 Pre-requisites:
 1) Install Java -SDK 12 

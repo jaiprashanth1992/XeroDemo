@@ -8,7 +8,7 @@
 4) Make sure Google Chrome is present
 
 # EnvironmentSetup:
-1) Set JAVA_HOME, in environent variables for the jdk user use.
+1) Set JAVA_HOME, Path variables in environent set up for the jdk user use.
 2) As i used chrome as my browser for execution - Latest chrome driver is kept in src/drivers folder 
 Note: All other required dependancies like Cucumber, Selenium, Gherkin, extent reports are placed in src/lib folder 
 

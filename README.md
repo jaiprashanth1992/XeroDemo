@@ -1,7 +1,7 @@
 # XeroDemo -
 ##Selenium with Cucumber(BDD framework)##
 
-Pre-requisites:
+# Pre-requisites:
 1) Install Java -SDK 12 
 2) Install Git 
 3) Install IntelliJ
@@ -12,7 +12,7 @@ Pre-requisites:
 2) As i used chrome as my browser for execution - Latest chrome driver is kept in src/drivers folder 
 Note: All other required dependancies like Cucumber, Selenium, Gherkin, extent reports are placed in src/lib folder 
 
-#Cloning the project:
+# Cloning the project:
 Follow below Steps within command prompt to import the project 
 1) cd to the path you want to download the framework - For example "cd C:/Users/"
 2) mkdir to create a new directory with name “Automation_Projects”
@@ -21,7 +21,7 @@ Follow below Steps within command prompt to import the project
 5) git clone https://github.com/jaiprashanth1992/XeroDemo.git - to clone the project framework 
 6) cd XeroDemo
 
-#IntelliJ Setup
+# IntelliJ Setup
 1) Open the Cloned project in IntelliJ - File--> New --> Project from Existing Sources
 2) Select the project directory from the pop up displayed
 3) Proceed next few screen by selecting prepopulated libraries, dependancies and SDKs
@@ -33,13 +33,13 @@ Follow below Steps within command prompt to import the project
   b) Feature File path - Xero_Demo/src/Tests/FeatureFile/AddAccount.feature
   c) Program Arguments -  --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome
 
-#Executing the Tests
+# Executing the Tests
 1) Navigate to "src/Tests/testrunner.java" class
 2) Right click testrunner and select Run 'testrunner'
 
 Google chrome pop ups and the execution begins!!
 
-#Reporting
+# Reporting
 1) Extent reports will be generated in the project folder -"C:/Users/Automation_Projects Xero_Demo/HtmlOutput/
 2) Open the latest html report generated using any browser of your choice
 

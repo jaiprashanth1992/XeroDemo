@@ -74,14 +74,6 @@ public class AddAccountPO {
         driver.findElement(clickContinueBtn).click();
     }
 
-//    /**
-//     * This method identifies and CLick on Select bank button
-//     */
-//    public void setClickOnBank(){
-//        driver.findElement(selectBank).click();
-//    }
-
-
     /**
      * This method identifies and Selects the account type
      */

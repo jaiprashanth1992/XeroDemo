@@ -15,7 +15,7 @@ public class AddOrganisationPO {
     By OrgPayTaxes = By.xpath("//span[contains(@class,'xui-pickitem--text')]/span[contains(.,'New Zealand')]");
     By orgDoDropDownIcon = By.xpath("//input[contains(@data-automationid,'industry-autocompleter--input')]");
     By orgDoDropDownselectOption = By.xpath("//span[@class='xui-pickitem--text']/span");
-    By clickonSelectOnelistDropDown = By.xpath("//span[contains(.,'Select one from the list')]");
+    //By clickonSelectOnelistDropDown = By.xpath("//span[contains(.,'Select one from the list')]");
     By selectBankLinkOption = By.xpath("//li[contains(@id,'Banklink')]");
     By clickOnStartTrailBtn = By.xpath("//button[contains(.,'Start trial')]");
     By clickOnPreviousSoftQues = By.xpath("//button[contains(@data-automationid,'previous-software-question---button')]");
@@ -74,13 +74,6 @@ public class AddOrganisationPO {
 
     }
 
-//    /**This method identifies the elements of Login button in welcome screen
-//     * and clicks it
-//     */
-//    public void clickOnDropDown() {
-//        driver.findElement(clickonSelectOnelistDropDown).click();
-//    }
-
     /**This method identifies the elements of Start trial button in Organisation creation screen
      */
     public void clickOnStartTrailBtn() {
@@ -91,6 +84,5 @@ public class AddOrganisationPO {
      */
     public void clickOnBlankList() {
         driver.findElement(selectBankLinkOption).click();
-
     }
 }
